@@ -1,0 +1,1064 @@
+
+Location         : eastus
+DisplayName      : East US
+Type             : Region
+Longitude        : -79.8164
+Latitude         : 37.3719
+PhysicalLocation : Virginia
+RegionType       : Physical
+RegionCategory   : Recommended
+GeographyGroup   : US
+PairedRegion     : [
+                     {
+                       "Name": "westus",
+                       "Id": "/subscriptions/bec0324e-4ff3-4e18-8d7b-2741bb57234f/locations/westus",
+                       "SubscriptionId": null
+                     }
+                   ]
+Providers        : {Microsoft.Security, Microsoft.Network, Microsoft.Storage, Microsoft.Compute…}
+
+Location         : eastus2
+DisplayName      : East US 2
+Type             : Region
+Longitude        : -78.3889
+Latitude         : 36.6681
+PhysicalLocation : Virginia
+RegionType       : Physical
+RegionCategory   : Recommended
+GeographyGroup   : US
+PairedRegion     : [
+                     {
+                       "Name": "centralus",
+                       "Id": "/subscriptions/bec0324e-4ff3-4e18-8d7b-2741bb57234f/locations/centralus",
+                       "SubscriptionId": null
+                     }
+                   ]
+Providers        : {Microsoft.Security, Microsoft.Network, Microsoft.Storage, Microsoft.Compute…}
+
+Location         : southcentralus
+DisplayName      : South Central US
+Type             : Region
+Longitude        : -98.5
+Latitude         : 29.4167
+PhysicalLocation : Texas
+RegionType       : Physical
+RegionCategory   : Recommended
+GeographyGroup   : US
+PairedRegion     : [
+                     {
+                       "Name": "northcentralus",
+                       "Id": "/subscriptions/bec0324e-4ff3-4e18-8d7b-2741bb57234f/locations/northcentralus",
+                       "SubscriptionId": null
+                     }
+                   ]
+Providers        : {Microsoft.Security, Microsoft.Network, Microsoft.Storage, Microsoft.Compute…}
+
+Location         : westus2
+DisplayName      : West US 2
+Type             : Region
+Longitude        : -119.852
+Latitude         : 47.233
+PhysicalLocation : Washington
+RegionType       : Physical
+RegionCategory   : Recommended
+GeographyGroup   : US
+PairedRegion     : [
+                     {
+                       "Name": "westcentralus",
+                       "Id": "/subscriptions/bec0324e-4ff3-4e18-8d7b-2741bb57234f/locations/westcentralus",
+                       "SubscriptionId": null
+                     }
+                   ]
+Providers        : {Microsoft.Security, Microsoft.Network, Microsoft.Storage, Microsoft.Compute…}
+
+Location         : westus3
+DisplayName      : West US 3
+Type             : Region
+Longitude        : -112.074036
+Latitude         : 33.448376
+PhysicalLocation : Phoenix
+RegionType       : Physical
+RegionCategory   : Recommended
+GeographyGroup   : US
+PairedRegion     : [
+                     {
+                       "Name": "eastus",
+                       "Id": "/subscriptions/bec0324e-4ff3-4e18-8d7b-2741bb57234f/locations/eastus",
+                       "SubscriptionId": null
+                     }
+                   ]
+Providers        : {Microsoft.Security, Microsoft.Network, Microsoft.Storage, Microsoft.Compute…}
+
+Location         : australiaeast
+DisplayName      : Australia East
+Type             : Region
+Longitude        : 151.2094
+Latitude         : -33.86
+PhysicalLocation : New South Wales
+RegionType       : Physical
+RegionCategory   : Recommended
+GeographyGroup   : Asia Pacific
+PairedRegion     : [
+                     {
+                       "Name": "australiasoutheast",
+                       "Id": "/subscriptions/bec0324e-4ff3-4e18-8d7b-2741bb57234f/locations/australiasoutheast",
+                       "SubscriptionId": null
+                     }
+                   ]
+Providers        : {Microsoft.Security, Microsoft.Network, Microsoft.Storage, Microsoft.Compute…}
+
+Location         : southeastasia
+DisplayName      : Southeast Asia
+Type             : Region
+Longitude        : 103.833
+Latitude         : 1.283
+PhysicalLocation : Singapore
+RegionType       : Physical
+RegionCategory   : Recommended
+GeographyGroup   : Asia Pacific
+PairedRegion     : [
+                     {
+                       "Name": "eastasia",
+                       "Id": "/subscriptions/bec0324e-4ff3-4e18-8d7b-2741bb57234f/locations/eastasia",
+                       "SubscriptionId": null
+                     }
+                   ]
+Providers        : {Microsoft.Security, Microsoft.Network, Microsoft.Storage, Microsoft.Compute…}
+
+Location         : northeurope
+DisplayName      : North Europe
+Type             : Region
+Longitude        : -6.2597
+Latitude         : 53.3478
+PhysicalLocation : Ireland
+RegionType       : Physical
+RegionCategory   : Recommended
+GeographyGroup   : Europe
+PairedRegion     : [
+                     {
+                       "Name": "westeurope",
+                       "Id": "/subscriptions/bec0324e-4ff3-4e18-8d7b-2741bb57234f/locations/westeurope",
+                       "SubscriptionId": null
+                     }
+                   ]
+Providers        : {Microsoft.Security, Microsoft.Network, Microsoft.Storage, Microsoft.Compute…}
+
+Location         : swedencentral
+DisplayName      : Sweden Central
+Type             : Region
+Longitude        : 17.14127
+Latitude         : 60.67488
+PhysicalLocation : Gävle
+RegionType       : Physical
+RegionCategory   : Recommended
+GeographyGroup   : Europe
+PairedRegion     : [
+                     {
+                       "Name": "swedensouth",
+                       "Id": "/subscriptions/bec0324e-4ff3-4e18-8d7b-2741bb57234f/locations/swedensouth",
+                       "SubscriptionId": null
+                     }
+                   ]
+Providers        : {Microsoft.Security, Microsoft.Network, Microsoft.Storage, Microsoft.Compute…}
+
+Location         : uksouth
+DisplayName      : UK South
+Type             : Region
+Longitude        : -0.799
+Latitude         : 50.941
+PhysicalLocation : London
+RegionType       : Physical
+RegionCategory   : Recommended
+GeographyGroup   : Europe
+PairedRegion     : [
+                     {
+                       "Name": "ukwest",
+                       "Id": "/subscriptions/bec0324e-4ff3-4e18-8d7b-2741bb57234f/locations/ukwest",
+                       "SubscriptionId": null
+                     }
+                   ]
+Providers        : {Microsoft.Security, Microsoft.Network, Microsoft.Storage, Microsoft.Compute…}
+
+Location         : westeurope
+DisplayName      : West Europe
+Type             : Region
+Longitude        : 4.9
+Latitude         : 52.3667
+PhysicalLocation : Netherlands
+RegionType       : Physical
+RegionCategory   : Recommended
+GeographyGroup   : Europe
+PairedRegion     : [
+                     {
+                       "Name": "northeurope",
+                       "Id": "/subscriptions/bec0324e-4ff3-4e18-8d7b-2741bb57234f/locations/northeurope",
+                       "SubscriptionId": null
+                     }
+                   ]
+Providers        : {Microsoft.Security, Microsoft.Network, Microsoft.Storage, Microsoft.Compute…}
+
+Location         : centralus
+DisplayName      : Central US
+Type             : Region
+Longitude        : -93.6208
+Latitude         : 41.5908
+PhysicalLocation : Iowa
+RegionType       : Physical
+RegionCategory   : Recommended
+GeographyGroup   : US
+PairedRegion     : [
+                     {
+                       "Name": "eastus2",
+                       "Id": "/subscriptions/bec0324e-4ff3-4e18-8d7b-2741bb57234f/locations/eastus2",
+                       "SubscriptionId": null
+                     }
+                   ]
+Providers        : {Microsoft.Security, Microsoft.Network, Microsoft.Storage, Microsoft.Compute…}
+
+Location         : southafricanorth
+DisplayName      : South Africa North
+Type             : Region
+Longitude        : 28.21837
+Latitude         : -25.73134
+PhysicalLocation : Johannesburg
+RegionType       : Physical
+RegionCategory   : Recommended
+GeographyGroup   : Africa
+PairedRegion     : [
+                     {
+                       "Name": "southafricawest",
+                       "Id": "/subscriptions/bec0324e-4ff3-4e18-8d7b-2741bb57234f/locations/southafricawest",
+                       "SubscriptionId": null
+                     }
+                   ]
+Providers        : {Microsoft.Security, Microsoft.Network, Microsoft.Storage, Microsoft.Compute…}
+
+Location         : centralindia
+DisplayName      : Central India
+Type             : Region
+Longitude        : 73.9197
+Latitude         : 18.5822
+PhysicalLocation : Pune
+RegionType       : Physical
+RegionCategory   : Recommended
+GeographyGroup   : Asia Pacific
+PairedRegion     : [
+                     {
+                       "Name": "southindia",
+                       "Id": "/subscriptions/bec0324e-4ff3-4e18-8d7b-2741bb57234f/locations/southindia",
+                       "SubscriptionId": null
+                     }
+                   ]
+Providers        : {Microsoft.Security, Microsoft.Network, Microsoft.Storage, Microsoft.Compute…}
+
+Location         : eastasia
+DisplayName      : East Asia
+Type             : Region
+Longitude        : 114.188
+Latitude         : 22.267
+PhysicalLocation : Hong Kong
+RegionType       : Physical
+RegionCategory   : Recommended
+GeographyGroup   : Asia Pacific
+PairedRegion     : [
+                     {
+                       "Name": "southeastasia",
+                       "Id": "/subscriptions/bec0324e-4ff3-4e18-8d7b-2741bb57234f/locations/southeastasia",
+                       "SubscriptionId": null
+                     }
+                   ]
+Providers        : {Microsoft.Security, Microsoft.Network, Microsoft.Storage, Microsoft.Compute…}
+
+Location         : japaneast
+DisplayName      : Japan East
+Type             : Region
+Longitude        : 139.77
+Latitude         : 35.68
+PhysicalLocation : Tokyo, Saitama
+RegionType       : Physical
+RegionCategory   : Recommended
+GeographyGroup   : Asia Pacific
+PairedRegion     : [
+                     {
+                       "Name": "japanwest",
+                       "Id": "/subscriptions/bec0324e-4ff3-4e18-8d7b-2741bb57234f/locations/japanwest",
+                       "SubscriptionId": null
+                     }
+                   ]
+Providers        : {Microsoft.Security, Microsoft.Network, Microsoft.Storage, Microsoft.Compute…}
+
+Location         : koreacentral
+DisplayName      : Korea Central
+Type             : Region
+Longitude        : 126.978
+Latitude         : 37.5665
+PhysicalLocation : Seoul
+RegionType       : Physical
+RegionCategory   : Recommended
+GeographyGroup   : Asia Pacific
+PairedRegion     : [
+                     {
+                       "Name": "koreasouth",
+                       "Id": "/subscriptions/bec0324e-4ff3-4e18-8d7b-2741bb57234f/locations/koreasouth",
+                       "SubscriptionId": null
+                     }
+                   ]
+Providers        : {Microsoft.Security, Microsoft.Network, Microsoft.Storage, Microsoft.Compute…}
+
+Location         : canadacentral
+DisplayName      : Canada Central
+Type             : Region
+Longitude        : -79.383
+Latitude         : 43.653
+PhysicalLocation : Toronto
+RegionType       : Physical
+RegionCategory   : Recommended
+GeographyGroup   : Canada
+PairedRegion     : [
+                     {
+                       "Name": "canadaeast",
+                       "Id": "/subscriptions/bec0324e-4ff3-4e18-8d7b-2741bb57234f/locations/canadaeast",
+                       "SubscriptionId": null
+                     }
+                   ]
+Providers        : {Microsoft.Security, Microsoft.Network, Microsoft.Storage, Microsoft.Compute…}
+
+Location         : francecentral
+DisplayName      : France Central
+Type             : Region
+Longitude        : 2.373
+Latitude         : 46.3772
+PhysicalLocation : Paris
+RegionType       : Physical
+RegionCategory   : Recommended
+GeographyGroup   : Europe
+PairedRegion     : [
+                     {
+                       "Name": "francesouth",
+                       "Id": "/subscriptions/bec0324e-4ff3-4e18-8d7b-2741bb57234f/locations/francesouth",
+                       "SubscriptionId": null
+                     }
+                   ]
+Providers        : {Microsoft.Security, Microsoft.Network, Microsoft.Storage, Microsoft.Compute…}
+
+Location         : germanywestcentral
+DisplayName      : Germany West Central
+Type             : Region
+Longitude        : 8.682127
+Latitude         : 50.110924
+PhysicalLocation : Frankfurt
+RegionType       : Physical
+RegionCategory   : Recommended
+GeographyGroup   : Europe
+PairedRegion     : [
+                     {
+                       "Name": "germanynorth",
+                       "Id": "/subscriptions/bec0324e-4ff3-4e18-8d7b-2741bb57234f/locations/germanynorth",
+                       "SubscriptionId": null
+                     }
+                   ]
+Providers        : {Microsoft.Security, Microsoft.Network, Microsoft.Storage, Microsoft.Compute…}
+
+Location         : italynorth
+DisplayName      : Italy North
+Type             : Region
+Longitude        : 9.18109
+Latitude         : 45.46888
+PhysicalLocation : Milan
+RegionType       : Physical
+RegionCategory   : Recommended
+GeographyGroup   : Europe
+PairedRegion     : 
+Providers        : {Microsoft.Security, Microsoft.Network, Microsoft.Storage, Microsoft.Compute…}
+
+Location         : norwayeast
+DisplayName      : Norway East
+Type             : Region
+Longitude        : 10.752245
+Latitude         : 59.913868
+PhysicalLocation : Norway
+RegionType       : Physical
+RegionCategory   : Recommended
+GeographyGroup   : Europe
+PairedRegion     : [
+                     {
+                       "Name": "norwaywest",
+                       "Id": "/subscriptions/bec0324e-4ff3-4e18-8d7b-2741bb57234f/locations/norwaywest",
+                       "SubscriptionId": null
+                     }
+                   ]
+Providers        : {Microsoft.Security, Microsoft.Network, Microsoft.Storage, Microsoft.Compute…}
+
+Location         : polandcentral
+DisplayName      : Poland Central
+Type             : Region
+Longitude        : 21.01666
+Latitude         : 52.23334
+PhysicalLocation : Warsaw
+RegionType       : Physical
+RegionCategory   : Recommended
+GeographyGroup   : Europe
+PairedRegion     : 
+Providers        : {Microsoft.Security, Microsoft.Network, Microsoft.Storage, Microsoft.Compute…}
+
+Location         : switzerlandnorth
+DisplayName      : Switzerland North
+Type             : Region
+Longitude        : 8.564572
+Latitude         : 47.451542
+PhysicalLocation : Zurich
+RegionType       : Physical
+RegionCategory   : Recommended
+GeographyGroup   : Europe
+PairedRegion     : [
+                     {
+                       "Name": "switzerlandwest",
+                       "Id": "/subscriptions/bec0324e-4ff3-4e18-8d7b-2741bb57234f/locations/switzerlandwest",
+                       "SubscriptionId": null
+                     }
+                   ]
+Providers        : {Microsoft.Security, Microsoft.Network, Microsoft.Storage, Microsoft.Compute…}
+
+Location         : uaenorth
+DisplayName      : UAE North
+Type             : Region
+Longitude        : 55.316666
+Latitude         : 25.266666
+PhysicalLocation : Dubai
+RegionType       : Physical
+RegionCategory   : Recommended
+GeographyGroup   : Middle East
+PairedRegion     : [
+                     {
+                       "Name": "uaecentral",
+                       "Id": "/subscriptions/bec0324e-4ff3-4e18-8d7b-2741bb57234f/locations/uaecentral",
+                       "SubscriptionId": null
+                     }
+                   ]
+Providers        : {Microsoft.Security, Microsoft.Network, Microsoft.Storage, Microsoft.Compute…}
+
+Location         : brazilsouth
+DisplayName      : Brazil South
+Type             : Region
+Longitude        : -46.633
+Latitude         : -23.55
+PhysicalLocation : Sao Paulo State
+RegionType       : Physical
+RegionCategory   : Recommended
+GeographyGroup   : South America
+PairedRegion     : [
+                     {
+                       "Name": "southcentralus",
+                       "Id": "/subscriptions/bec0324e-4ff3-4e18-8d7b-2741bb57234f/locations/southcentralus",
+                       "SubscriptionId": null
+                     }
+                   ]
+Providers        : {Microsoft.Security, Microsoft.Network, Microsoft.Storage, Microsoft.Compute…}
+
+Location         : centraluseuap
+DisplayName      : Central US EUAP
+Type             : Region
+Longitude        : -93.6208
+Latitude         : 41.5908
+PhysicalLocation : 
+RegionType       : Physical
+RegionCategory   : Recommended
+GeographyGroup   : US
+PairedRegion     : [
+                     {
+                       "Name": "eastus2euap",
+                       "Id": "/subscriptions/bec0324e-4ff3-4e18-8d7b-2741bb57234f/locations/eastus2euap",
+                       "SubscriptionId": null
+                     }
+                   ]
+Providers        : {Microsoft.KeyVault, Microsoft.ContainerService, Microsoft.CognitiveServices, Microsoft.DocumentDB…}
+
+Location         : israelcentral
+DisplayName      : Israel Central
+Type             : Region
+Longitude        : 33.4506633
+Latitude         : 31.2655698
+PhysicalLocation : Israel
+RegionType       : Physical
+RegionCategory   : Recommended
+GeographyGroup   : Middle East
+PairedRegion     : 
+Providers        : {Microsoft.Security, Microsoft.Network, Microsoft.Storage, Microsoft.Compute…}
+
+Location         : qatarcentral
+DisplayName      : Qatar Central
+Type             : Region
+Longitude        : 51.439327
+Latitude         : 25.551462
+PhysicalLocation : Doha
+RegionType       : Physical
+RegionCategory   : Recommended
+GeographyGroup   : Middle East
+PairedRegion     : 
+Providers        : {Microsoft.Security, Microsoft.Network, Microsoft.Storage, Microsoft.Compute…}
+
+Location         : asia
+DisplayName      : Asia
+Type             : Region
+Longitude        : 
+Latitude         : 
+PhysicalLocation : 
+RegionType       : Logical
+RegionCategory   : Other
+GeographyGroup   : 
+PairedRegion     : 
+Providers        : {Microsoft.ManagedIdentity, Microsoft.PowerPlatform}
+
+Location         : asiapacific
+DisplayName      : Asia Pacific
+Type             : Region
+Longitude        : 
+Latitude         : 
+PhysicalLocation : 
+RegionType       : Logical
+RegionCategory   : Other
+GeographyGroup   : 
+PairedRegion     : 
+Providers        : {Microsoft.AzureActiveDirectory}
+
+Location         : australia
+DisplayName      : Australia
+Type             : Region
+Longitude        : 
+Latitude         : 
+PhysicalLocation : 
+RegionType       : Logical
+RegionCategory   : Other
+GeographyGroup   : 
+PairedRegion     : 
+Providers        : {Microsoft.ManagedIdentity, Microsoft.AzureActiveDirectory, Microsoft.PowerPlatform}
+
+Location         : brazil
+DisplayName      : Brazil
+Type             : Region
+Longitude        : 
+Latitude         : 
+PhysicalLocation : 
+RegionType       : Logical
+RegionCategory   : Other
+GeographyGroup   : 
+PairedRegion     : 
+Providers        : {Microsoft.ManagedIdentity, Microsoft.PowerPlatform}
+
+Location         : canada
+DisplayName      : Canada
+Type             : Region
+Longitude        : 
+Latitude         : 
+PhysicalLocation : 
+RegionType       : Logical
+RegionCategory   : Other
+GeographyGroup   : 
+PairedRegion     : 
+Providers        : {Microsoft.ManagedIdentity, Microsoft.PowerPlatform}
+
+Location         : europe
+DisplayName      : Europe
+Type             : Region
+Longitude        : 
+Latitude         : 
+PhysicalLocation : 
+RegionType       : Logical
+RegionCategory   : Other
+GeographyGroup   : 
+PairedRegion     : 
+Providers        : {Microsoft.Maps, Microsoft.ManagedIdentity, Microsoft.AzureActiveDirectory, Microsoft.PowerPlatform}
+
+Location         : france
+DisplayName      : France
+Type             : Region
+Longitude        : 
+Latitude         : 
+PhysicalLocation : 
+RegionType       : Logical
+RegionCategory   : Other
+GeographyGroup   : 
+PairedRegion     : 
+Providers        : {Microsoft.ManagedIdentity, Microsoft.PowerPlatform}
+
+Location         : germany
+DisplayName      : Germany
+Type             : Region
+Longitude        : 
+Latitude         : 
+PhysicalLocation : 
+RegionType       : Logical
+RegionCategory   : Other
+GeographyGroup   : 
+PairedRegion     : 
+Providers        : {Microsoft.ManagedIdentity, Microsoft.PowerPlatform}
+
+Location         : global
+DisplayName      : Global
+Type             : Region
+Longitude        : 
+Latitude         : 
+PhysicalLocation : 
+RegionType       : Logical
+RegionCategory   : Other
+GeographyGroup   : 
+PairedRegion     : 
+Providers        : {Microsoft.Security, Microsoft.Network, Microsoft.AlertsManagement, Microsoft.Cdn…}
+
+Location         : india
+DisplayName      : India
+Type             : Region
+Longitude        : 
+Latitude         : 
+PhysicalLocation : 
+RegionType       : Logical
+RegionCategory   : Other
+GeographyGroup   : 
+PairedRegion     : 
+Providers        : {Microsoft.ManagedIdentity, Microsoft.PowerPlatform}
+
+Location         : japan
+DisplayName      : Japan
+Type             : Region
+Longitude        : 
+Latitude         : 
+PhysicalLocation : 
+RegionType       : Logical
+RegionCategory   : Other
+GeographyGroup   : 
+PairedRegion     : 
+Providers        : {Microsoft.ManagedIdentity, Microsoft.AzureActiveDirectory, Microsoft.PowerPlatform}
+
+Location         : korea
+DisplayName      : Korea
+Type             : Region
+Longitude        : 
+Latitude         : 
+PhysicalLocation : 
+RegionType       : Logical
+RegionCategory   : Other
+GeographyGroup   : 
+PairedRegion     : 
+Providers        : {Microsoft.ManagedIdentity, Microsoft.PowerPlatform}
+
+Location         : norway
+DisplayName      : Norway
+Type             : Region
+Longitude        : 
+Latitude         : 
+PhysicalLocation : 
+RegionType       : Logical
+RegionCategory   : Other
+GeographyGroup   : 
+PairedRegion     : 
+Providers        : {Microsoft.ManagedIdentity, Microsoft.PowerPlatform}
+
+Location         : singapore
+DisplayName      : Singapore
+Type             : Region
+Longitude        : 
+Latitude         : 
+PhysicalLocation : 
+RegionType       : Logical
+RegionCategory   : Other
+GeographyGroup   : 
+PairedRegion     : 
+Providers        : {Microsoft.ManagedIdentity, Microsoft.PowerPlatform}
+
+Location         : southafrica
+DisplayName      : South Africa
+Type             : Region
+Longitude        : 
+Latitude         : 
+PhysicalLocation : 
+RegionType       : Logical
+RegionCategory   : Other
+GeographyGroup   : 
+PairedRegion     : 
+Providers        : {Microsoft.ManagedIdentity, Microsoft.PowerPlatform}
+
+Location         : switzerland
+DisplayName      : Switzerland
+Type             : Region
+Longitude        : 
+Latitude         : 
+PhysicalLocation : 
+RegionType       : Logical
+RegionCategory   : Other
+GeographyGroup   : 
+PairedRegion     : 
+Providers        : {Microsoft.ManagedIdentity, Microsoft.PowerPlatform}
+
+Location         : unitedstates
+DisplayName      : United States
+Type             : Region
+Longitude        : 
+Latitude         : 
+PhysicalLocation : 
+RegionType       : Logical
+RegionCategory   : Other
+GeographyGroup   : 
+PairedRegion     : 
+Providers        : {Microsoft.Maps, Microsoft.ManagedIdentity, Microsoft.AzureActiveDirectory, Microsoft.PowerPlatform…}
+
+Location         : northcentralus
+DisplayName      : North Central US
+Type             : Region
+Longitude        : -87.6278
+Latitude         : 41.8819
+PhysicalLocation : Illinois
+RegionType       : Physical
+RegionCategory   : Other
+GeographyGroup   : US
+PairedRegion     : [
+                     {
+                       "Name": "southcentralus",
+                       "Id": "/subscriptions/bec0324e-4ff3-4e18-8d7b-2741bb57234f/locations/southcentralus",
+                       "SubscriptionId": null
+                     }
+                   ]
+Providers        : {Microsoft.Security, Microsoft.Network, Microsoft.Storage, Microsoft.Compute…}
+
+Location         : westus
+DisplayName      : West US
+Type             : Region
+Longitude        : -122.417
+Latitude         : 37.783
+PhysicalLocation : California
+RegionType       : Physical
+RegionCategory   : Other
+GeographyGroup   : US
+PairedRegion     : [
+                     {
+                       "Name": "eastus",
+                       "Id": "/subscriptions/bec0324e-4ff3-4e18-8d7b-2741bb57234f/locations/eastus",
+                       "SubscriptionId": null
+                     }
+                   ]
+Providers        : {Microsoft.Security, Microsoft.Network, Microsoft.Storage, Microsoft.Compute…}
+
+Location         : japanwest
+DisplayName      : Japan West
+Type             : Region
+Longitude        : 135.5022
+Latitude         : 34.6939
+PhysicalLocation : Osaka
+RegionType       : Physical
+RegionCategory   : Other
+GeographyGroup   : Asia Pacific
+PairedRegion     : [
+                     {
+                       "Name": "japaneast",
+                       "Id": "/subscriptions/bec0324e-4ff3-4e18-8d7b-2741bb57234f/locations/japaneast",
+                       "SubscriptionId": null
+                     }
+                   ]
+Providers        : {Microsoft.Security, Microsoft.Network, Microsoft.Storage, Microsoft.Compute…}
+
+Location         : eastus2euap
+DisplayName      : East US 2 EUAP
+Type             : Region
+Longitude        : -78.3889
+Latitude         : 36.6681
+PhysicalLocation : 
+RegionType       : Physical
+RegionCategory   : Other
+GeographyGroup   : US
+PairedRegion     : [
+                     {
+                       "Name": "centraluseuap",
+                       "Id": "/subscriptions/bec0324e-4ff3-4e18-8d7b-2741bb57234f/locations/centraluseuap",
+                       "SubscriptionId": null
+                     }
+                   ]
+Providers        : {Microsoft.OperationalInsights, Microsoft.KeyVault, Microsoft.ContainerService, Microsoft.CognitiveServices…}
+
+Location         : westcentralus
+DisplayName      : West Central US
+Type             : Region
+Longitude        : -110.234
+Latitude         : 40.89
+PhysicalLocation : Wyoming
+RegionType       : Physical
+RegionCategory   : Other
+GeographyGroup   : US
+PairedRegion     : [
+                     {
+                       "Name": "westus2",
+                       "Id": "/subscriptions/bec0324e-4ff3-4e18-8d7b-2741bb57234f/locations/westus2",
+                       "SubscriptionId": null
+                     }
+                   ]
+Providers        : {Microsoft.Security, Microsoft.Network, Microsoft.Storage, Microsoft.Compute…}
+
+Location         : southafricawest
+DisplayName      : South Africa West
+Type             : Region
+Longitude        : 18.843266
+Latitude         : -34.075691
+PhysicalLocation : Cape Town
+RegionType       : Physical
+RegionCategory   : Other
+GeographyGroup   : Africa
+PairedRegion     : [
+                     {
+                       "Name": "southafricanorth",
+                       "Id": "/subscriptions/bec0324e-4ff3-4e18-8d7b-2741bb57234f/locations/southafricanorth",
+                       "SubscriptionId": null
+                     }
+                   ]
+Providers        : {Microsoft.Security, Microsoft.Network, Microsoft.OperationsManagement, Microsoft.OperationalInsights…}
+
+Location         : australiacentral
+DisplayName      : Australia Central
+Type             : Region
+Longitude        : 149.1244
+Latitude         : -35.3075
+PhysicalLocation : Canberra
+RegionType       : Physical
+RegionCategory   : Other
+GeographyGroup   : Asia Pacific
+PairedRegion     : [
+                     {
+                       "Name": "australiacentral2",
+                       "Id": "/subscriptions/bec0324e-4ff3-4e18-8d7b-2741bb57234f/locations/australiacentral2",
+                       "SubscriptionId": null
+                     }
+                   ]
+Providers        : {Microsoft.Security, Microsoft.Network, Microsoft.Storage, Microsoft.Compute…}
+
+Location         : australiacentral2
+DisplayName      : Australia Central 2
+Type             : Region
+Longitude        : 149.1244
+Latitude         : -35.3075
+PhysicalLocation : Canberra
+RegionType       : Physical
+RegionCategory   : Other
+GeographyGroup   : Asia Pacific
+PairedRegion     : [
+                     {
+                       "Name": "australiacentral",
+                       "Id": "/subscriptions/bec0324e-4ff3-4e18-8d7b-2741bb57234f/locations/australiacentral",
+                       "SubscriptionId": null
+                     }
+                   ]
+Providers        : {Microsoft.Security, Microsoft.Network, Microsoft.DevTestLab, Microsoft.OperationsManagement…}
+
+Location         : australiasoutheast
+DisplayName      : Australia Southeast
+Type             : Region
+Longitude        : 144.9631
+Latitude         : -37.8136
+PhysicalLocation : Victoria
+RegionType       : Physical
+RegionCategory   : Other
+GeographyGroup   : Asia Pacific
+PairedRegion     : [
+                     {
+                       "Name": "australiaeast",
+                       "Id": "/subscriptions/bec0324e-4ff3-4e18-8d7b-2741bb57234f/locations/australiaeast",
+                       "SubscriptionId": null
+                     }
+                   ]
+Providers        : {Microsoft.Security, Microsoft.Network, Microsoft.Storage, Microsoft.Compute…}
+
+Location         : koreasouth
+DisplayName      : Korea South
+Type             : Region
+Longitude        : 129.0756
+Latitude         : 35.1796
+PhysicalLocation : Busan
+RegionType       : Physical
+RegionCategory   : Other
+GeographyGroup   : Asia Pacific
+PairedRegion     : [
+                     {
+                       "Name": "koreacentral",
+                       "Id": "/subscriptions/bec0324e-4ff3-4e18-8d7b-2741bb57234f/locations/koreacentral",
+                       "SubscriptionId": null
+                     }
+                   ]
+Providers        : {Microsoft.Security, Microsoft.Network, Microsoft.Storage, Microsoft.Compute…}
+
+Location         : southindia
+DisplayName      : South India
+Type             : Region
+Longitude        : 80.1636
+Latitude         : 12.9822
+PhysicalLocation : Chennai
+RegionType       : Physical
+RegionCategory   : Other
+GeographyGroup   : Asia Pacific
+PairedRegion     : [
+                     {
+                       "Name": "centralindia",
+                       "Id": "/subscriptions/bec0324e-4ff3-4e18-8d7b-2741bb57234f/locations/centralindia",
+                       "SubscriptionId": null
+                     }
+                   ]
+Providers        : {Microsoft.Security, Microsoft.Network, Microsoft.Storage, Microsoft.Compute…}
+
+Location         : westindia
+DisplayName      : West India
+Type             : Region
+Longitude        : 72.868
+Latitude         : 19.088
+PhysicalLocation : Mumbai
+RegionType       : Physical
+RegionCategory   : Other
+GeographyGroup   : Asia Pacific
+PairedRegion     : [
+                     {
+                       "Name": "southindia",
+                       "Id": "/subscriptions/bec0324e-4ff3-4e18-8d7b-2741bb57234f/locations/southindia",
+                       "SubscriptionId": null
+                     }
+                   ]
+Providers        : {Microsoft.Security, Microsoft.Network, Microsoft.Storage, Microsoft.Compute…}
+
+Location         : canadaeast
+DisplayName      : Canada East
+Type             : Region
+Longitude        : -71.217
+Latitude         : 46.817
+PhysicalLocation : Quebec
+RegionType       : Physical
+RegionCategory   : Other
+GeographyGroup   : Canada
+PairedRegion     : [
+                     {
+                       "Name": "canadacentral",
+                       "Id": "/subscriptions/bec0324e-4ff3-4e18-8d7b-2741bb57234f/locations/canadacentral",
+                       "SubscriptionId": null
+                     }
+                   ]
+Providers        : {Microsoft.Security, Microsoft.Network, Microsoft.Storage, Microsoft.Compute…}
+
+Location         : francesouth
+DisplayName      : France South
+Type             : Region
+Longitude        : 2.1972
+Latitude         : 43.8345
+PhysicalLocation : Marseille
+RegionType       : Physical
+RegionCategory   : Other
+GeographyGroup   : Europe
+PairedRegion     : [
+                     {
+                       "Name": "francecentral",
+                       "Id": "/subscriptions/bec0324e-4ff3-4e18-8d7b-2741bb57234f/locations/francecentral",
+                       "SubscriptionId": null
+                     }
+                   ]
+Providers        : {Microsoft.Security, Microsoft.Network, Microsoft.DevTestLab, Microsoft.AlertsManagement…}
+
+Location         : germanynorth
+DisplayName      : Germany North
+Type             : Region
+Longitude        : 8.806422
+Latitude         : 53.073635
+PhysicalLocation : Berlin
+RegionType       : Physical
+RegionCategory   : Other
+GeographyGroup   : Europe
+PairedRegion     : [
+                     {
+                       "Name": "germanywestcentral",
+                       "Id": "/subscriptions/bec0324e-4ff3-4e18-8d7b-2741bb57234f/locations/germanywestcentral",
+                       "SubscriptionId": null
+                     }
+                   ]
+Providers        : {Microsoft.Security, Microsoft.Network, Microsoft.OperationsManagement, Microsoft.OperationalInsights…}
+
+Location         : norwaywest
+DisplayName      : Norway West
+Type             : Region
+Longitude        : 5.733107
+Latitude         : 58.969975
+PhysicalLocation : Norway
+RegionType       : Physical
+RegionCategory   : Other
+GeographyGroup   : Europe
+PairedRegion     : [
+                     {
+                       "Name": "norwayeast",
+                       "Id": "/subscriptions/bec0324e-4ff3-4e18-8d7b-2741bb57234f/locations/norwayeast",
+                       "SubscriptionId": null
+                     }
+                   ]
+Providers        : {Microsoft.Security, Microsoft.Network, Microsoft.OperationsManagement, Microsoft.OperationalInsights…}
+
+Location         : switzerlandwest
+DisplayName      : Switzerland West
+Type             : Region
+Longitude        : 6.143158
+Latitude         : 46.204391
+PhysicalLocation : Geneva
+RegionType       : Physical
+RegionCategory   : Other
+GeographyGroup   : Europe
+PairedRegion     : [
+                     {
+                       "Name": "switzerlandnorth",
+                       "Id": "/subscriptions/bec0324e-4ff3-4e18-8d7b-2741bb57234f/locations/switzerlandnorth",
+                       "SubscriptionId": null
+                     }
+                   ]
+Providers        : {Microsoft.Security, Microsoft.Network, Microsoft.DevTestLab, Microsoft.OperationsManagement…}
+
+Location         : ukwest
+DisplayName      : UK West
+Type             : Region
+Longitude        : -3.084
+Latitude         : 53.427
+PhysicalLocation : Cardiff
+RegionType       : Physical
+RegionCategory   : Other
+GeographyGroup   : Europe
+PairedRegion     : [
+                     {
+                       "Name": "uksouth",
+                       "Id": "/subscriptions/bec0324e-4ff3-4e18-8d7b-2741bb57234f/locations/uksouth",
+                       "SubscriptionId": null
+                     }
+                   ]
+Providers        : {Microsoft.Security, Microsoft.Network, Microsoft.Storage, Microsoft.Compute…}
+
+Location         : uaecentral
+DisplayName      : UAE Central
+Type             : Region
+Longitude        : 54.366669
+Latitude         : 24.466667
+PhysicalLocation : Abu Dhabi
+RegionType       : Physical
+RegionCategory   : Other
+GeographyGroup   : Middle East
+PairedRegion     : [
+                     {
+                       "Name": "uaenorth",
+                       "Id": "/subscriptions/bec0324e-4ff3-4e18-8d7b-2741bb57234f/locations/uaenorth",
+                       "SubscriptionId": null
+                     }
+                   ]
+Providers        : {Microsoft.Security, Microsoft.Network, Microsoft.OperationsManagement, Microsoft.OperationalInsights…}
+
+Location         : brazilsoutheast
+DisplayName      : Brazil Southeast
+Type             : Region
+Longitude        : -43.2075
+Latitude         : -22.90278
+PhysicalLocation : Rio
+RegionType       : Physical
+RegionCategory   : Other
+GeographyGroup   : South America
+PairedRegion     : [
+                     {
+                       "Name": "brazilsouth",
+                       "Id": "/subscriptions/bec0324e-4ff3-4e18-8d7b-2741bb57234f/locations/brazilsouth",
+                       "SubscriptionId": null
+                     }
+                   ]
+Providers        : {Microsoft.Security, Microsoft.Network, Microsoft.DevTestLab, Microsoft.OperationsManagement…}
+
+Updating the list of Azure VM location in Github
