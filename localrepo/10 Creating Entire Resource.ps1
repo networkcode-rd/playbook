@@ -1,4 +1,5 @@
 #building an entire script of creating VM and assiging NSG to it
+#add new line
 
 $resourceGroup="app-grp"
 $networkName="app-network"
