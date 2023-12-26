@@ -1,3 +1,5 @@
+#building an entire script of creating VM and assiging NSG to it
+
 $resourceGroup="app-grp"
 $networkName="app-network"
 $location="Australia East"
