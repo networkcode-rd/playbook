@@ -1,9 +1,12 @@
+#building an entire script of creating VM and assiging NSG to it
+#add new line
+
 $resourceGroup="app-grp"
 $networkName="app-network"
-$location="North Europe"
-$AddressPrefix="10.0.0.0/16"
+$location="Australia East"
+$AddressPrefix="10.4.0.0/16"
 $subnetName="SubnetA"
-$subnetAddressPrefix="10.0.0.0/24"
+$subnetAddressPrefix="10.4.0.0/24"
 
 $subnet=New-AzVirtualNetworkSubnetConfig -Name $subnetName -AddressPrefix $subnetAddressPrefix
 
@@ -35,11 +38,11 @@ $networkSecurityGroupName="app-nsg"
 
 $nsgRule1=New-AzNetworkSecurityRuleConfig -Name "Allow-RDP" -Access Allow -Protocol Tcp `
 -Direction Inbound -Priority 120 -SourceAddressPrefix Internet -SourcePortRange * `
--DestinationAddressPrefix 10.0.0.0/24 -DestinationPortRange 3389
+-DestinationAddressPrefix 10.4.0.0/24 -DestinationPortRange 3389
 
 $nsgRule2=New-AzNetworkSecurityRuleConfig -Name "Allow-HTTP" -Access Allow -Protocol Tcp `
 -Direction Inbound -Priority 130 -SourceAddressPrefix Internet -SourcePortRange * `
--DestinationAddressPrefix 10.0.0.0/24 -DestinationPortRange 80
+-DestinationAddressPrefix 10.4.0.0/24 -DestinationPortRange 80
 
 $networkSecurityGroup=New-AzNetworkSecurityGroup -Name $networkSecurityGroupName -ResourceGroupName $resourceGroup `
 -Location $location -SecurityRules $nsgRule1,$nsgRule2
