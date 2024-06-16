@@ -1,0 +1,48 @@
+git clone https://github.com/networkcode-rd/playbook.git
+git status
+
+#change directory
+cd
+
+#list files
+ls
+ls -a
+
+
+===============================
+
+Types of file tracking system in Git.
+
+    1. Untracked - new file that git doesn't yet tracked
+    2. modified.
+    3. changed
+    4. Staged. = File is ready to be committed.
+    5. Unmodified.
+    6. Unchanged.
+
+===============================
+
+How to add and commit in Git
+    1. add - adds new or changed files in your working directory to the Git staging area. // git add <filename>
+        > git add <file-name>
+        > git add .
+
+    2. commit - it is the record of change // git commit -m "some message"
+        > git commit -m "message"
+
+    3. push - to upload local repo content to remote repo
+        > git push origin main
+
+
+===============================
+
+All About Init Command
+
+init - reference used for creating a new Git repo.
+
+    > git init
+    > git remote add origin <link>
+    > git remote -v (to verify remote)
+    > git branch (to check branch)
+    > git branch -M main (to rename branch)
+    > git push origin main
