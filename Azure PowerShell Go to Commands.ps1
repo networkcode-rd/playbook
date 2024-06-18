@@ -1,0 +1,5 @@
+Connect-AzAccount #initialize Authentication which will lead you to a browser based Auth.
+Get-AzSubscription # to understand after Authentication, you are logged in to which Subscription, in case if your organization has multiple subscription and you haven't set the default subscription of your choice
+Select-AzSubscription -Subscription xxxxxxxxxxxxxxxxxxxxxx # Use this to select the right subscription ID before making any changes. You can cross-verify the subscription ID by checking into your Azure account or check-in with your administrator or refer link: https://learn.microsoft.com/en-us/azure/azure-portal/get-subscription-tenant-id
+
+#=========================== Till this step we have confirmed we have logged into Azure Subscription successfully and now we are good to start with any deployment using PowerShell========
