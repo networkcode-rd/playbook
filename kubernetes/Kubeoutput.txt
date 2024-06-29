@@ -1,0 +1,102 @@
+az aks get-credentials --resource-group Application-testing --name aks-testing-deployment --overwrite-existing -->
+Merged "aks-testing-deployment" as current context in /home/adhoc/.kube/config
+
+
+kubectl cluster-info -->
+Kubernetes control plane is running at https://aks-testing-deployment-dns-mofjcb9y.hcp.centralindia.azmk8s.io:443
+CoreDNS is running at https://aks-testing-deployment-dns-mofjcb9y.hcp.centralindia.azmk8s.io:443/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy
+Metrics-server is running at https://aks-testing-deployment-dns-mofjcb9y.hcp.centralindia.azmk8s.io:443/api/v1/namespaces/kube-system/services/https:metrics-server:/proxy
+
+
+kubectl get nodes -o wide -->
+NAME                                STATUS   ROLES   AGE   VERSION   INTERNAL-IP   EXTERNAL-IP   OS-IMAGE             KERNEL-VERSION      CONTAINER-RUNTIME
+aks-agentpool-xxxxx-vmss000000   Ready    agent   20m   v1.28.9   10.224.0.4    <none>        Ubuntu 22.04.4 LTS   5.15.0-1064-azure   containerd://1.7.15-1
+aks-agentpool-xxxxx-vmss000001   Ready    agent   20m   v1.28.9   10.224.0.5    <none>        Ubuntu 22.04.4 LTS   5.15.0-1064-azure   containerd://1.7.15-1
+aks-userpool-xxxxx-vmss000000    Ready    agent   20m   v1.28.9   10.224.0.6    <none>        Ubuntu 22.04.4 LTS   5.15.0-1064-azure   containerd://1.7.15-1
+aks-userpool-xxxxx-vmss000001    Ready    agent   20m   v1.28.9   10.224.0.7    <none>        Ubuntu 22.04.4 LTS   5.15.0-1064-azure   containerd://1.7.15-1
+
+
+kubectl get ns -->
+NAME                STATUS   AGE
+default             Active   69m
+gatekeeper-system   Active   68m
+kube-node-lease     Active   69m
+kube-public         Active   69m
+kube-system         Active   69m
+
+
+
+ kubectl get ns -v=7 > pullingnamespace.txt --->
+I0629 19:29:19.155147   12293 loader.go:395] Config loaded from file:  /home/adhoc/.kube/config
+I0629 19:29:19.181514   12293 round_trippers.go:463] GET https://aks-testing-deployment-dns-mofjcb9y.hcp.centralindia.azmk8s.io:443/api/v1/namespaces?limit=500
+I0629 19:29:19.183551   12293 round_trippers.go:469] Request Headers:
+I0629 19:29:19.183687   12293 round_trippers.go:473]     Accept: application/json;as=Table;v=v1;g=meta.k8s.io,application/json;as=Table;v=v1beta1;g=meta.k8s.io,application/json
+I0629 19:29:19.183998   12293 round_trippers.go:473]     User-Agent: kubectl/v1.29.6 (linux/amd64) kubernetes/062798d
+I0629 19:29:19.184734   12293 round_trippers.go:473]     Authorization: Bearer <masked>
+I0629 19:29:19.340057   12293 round_trippers.go:574] Response Status: 200 OK in 155 milliseconds
+
+
+
+kubectl run superman -n customnamespacerd --image=nginx -->
+pod/superman created
+
+
+kubectl get pod -n customnamespacerd  -o wide -->
+NAME       READY   STATUS    RESTARTS   AGE   IP           NODE                               NOMINATED NODE   READINESS GATES
+superman   1/1     Running   0          12m   10.244.2.4   aks-userpool-20806549-vmss000001   <none>           <none>
+
+
+kubectl describe po superman -n customnamespacerd -->
+==========================================
+Name:             superman
+Namespace:        customnamespacerd
+Priority:         0
+Service Account:  default
+Node:             aks-userpool-20806549-vmss000001/10.224.0.7
+Start Time:       Sat, 29 Jun 2024 19:31:33 +0530
+Labels:           run=superman
+Annotations:      <none>
+Status:           Running
+IP:               10.244.2.4
+IPs:
+  IP:  10.244.2.4
+Containers:
+  superman:
+    Container ID:   containerd://6c299603fa407d2f5b1edde164a51e6357d038eb2f73c94bb1a62f55ea9be44e
+    Image:          nginx
+    Image ID:       docker.io/library/nginx@sha256:9c367186df9a6b18c6735357b8eb7f407347e84aea09beb184961cb83543d46e
+    Port:           <none>
+    Host Port:      <none>
+    State:          Running
+      Started:      Sat, 29 Jun 2024 19:31:39 +0530
+    Ready:          True
+    Restart Count:  0
+    Environment:    <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-pjbq4 (ro)
+Conditions:
+  Type              Status
+  Initialized       True
+  Ready             True
+  ContainersReady   True
+  PodScheduled      True
+Volumes:
+  kube-api-access-pjbq4:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    ConfigMapOptional:       <nil>
+    DownwardAPI:             true
+QoS Class:                   BestEffort
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type    Reason     Age   From               Message
+  ----    ------     ----  ----               -------
+  Normal  Scheduled  14m   default-scheduler  Successfully assigned customnamespacerd/superman to aks-userpool-20806549-vmss000001
+  Normal  Pulling    14m   kubelet            Pulling image "nginx"
+  Normal  Pulled     14m   kubelet            Successfully pulled image "nginx" in 5.34s (5.34s including waiting)
+  Normal  Created    14m   kubelet            Created container superman
+  Normal  Started    14m   kubelet            Started container superman
+  ==========================================
