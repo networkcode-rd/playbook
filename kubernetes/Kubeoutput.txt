@@ -100,3 +100,16 @@ Events:
   Normal  Created    14m   kubelet            Created container superman
   Normal  Started    14m   kubelet            Started container superman
   ==========================================
+
+
+  
+kubectl get pod -o wide -->
+NAME                                                    READY   STATUS   RESTARTS   AGE     IP           NODE                                NOMINATED NODE   READINESS GATES
+node-debugger-aks-agentpool-20806549-vmss000000-k95zk   0/1     Error    0          6m23s   10.224.0.4   aks-agentpool-20806549-vmss000000   <none>           <none>
+
+kubectl get nodes -o wide -->
+NAME                                STATUS   ROLES   AGE    VERSION   INTERNAL-IP   EXTERNAL-IP   OS-IMAGE             KERNEL-VERSION      CONTAINER-RUNTIME
+aks-agentpool-20806549-vmss000000   Ready    agent   126m   v1.28.9   10.224.0.4    <none>        Ubuntu 22.04.4 LTS   5.15.0-1064-azure   containerd://1.7.15-1
+aks-agentpool-20806549-vmss000001   Ready    agent   126m   v1.28.9   10.224.0.5    <none>        Ubuntu 22.04.4 LTS   5.15.0-1064-azure   containerd://1.7.15-1
+aks-userpool-20806549-vmss000000    Ready    agent   126m   v1.28.9   10.224.0.6    <none>        Ubuntu 22.04.4 LTS   5.15.0-1064-azure   containerd://1.7.15-1
+aks-userpool-20806549-vmss000001    Ready    agent   126m   v1.28.9   10.224.0.7    <none>        Ubuntu 22.04.4 LTS   5.15.0-1064-azure   containerd://1.7.15-1
