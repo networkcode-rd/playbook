@@ -1,4 +1,4 @@
-az aks get-credentials --resource-group Application-testing --name aks-testing-deployment --overwrite-existing -->
+az aks get-credentials --resource-group Application-testing --name aks-testing-deployment --overwrite-existing --> # To get the cluster information.
 Merged "aks-testing-deployment" as current context in /home/adhoc/.kube/config
 
 
@@ -113,3 +113,78 @@ aks-agentpool-20806549-vmss000000   Ready    agent   126m   v1.28.9   10.224.0.4
 aks-agentpool-20806549-vmss000001   Ready    agent   126m   v1.28.9   10.224.0.5    <none>        Ubuntu 22.04.4 LTS   5.15.0-1064-azure   containerd://1.7.15-1
 aks-userpool-20806549-vmss000000    Ready    agent   126m   v1.28.9   10.224.0.6    <none>        Ubuntu 22.04.4 LTS   5.15.0-1064-azure   containerd://1.7.15-1
 aks-userpool-20806549-vmss000001    Ready    agent   126m   v1.28.9   10.224.0.7    <none>        Ubuntu 22.04.4 LTS   5.15.0-1064-azure   containerd://1.7.15-1
+
+
+
+From inside a pod go to ---> cd /etc/cni/net.d | Here in this path check for containerd-net.conflist file and cat to it.
+
+
+
+>kubectl create deployment supermanpod -n customnamespacerd --image=nginx --port=80 -->
+deployment.apps/supermanpod created
+
+
+> kubectl get all -n customnamespacerd -->
+NAME                               READY   STATUS    RESTARTS   AGE
+pod/supermanpod-5dbcf999db-wt6qg   1/1     Running   0          9m24s
+pod/supermanpod-5dbcf999db-xcfhz   1/1     Running   0          3m40s
+
+NAME                          READY   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/supermanpod   2/2     2            2           10m
+
+NAME                                     DESIRED   CURRENT   READY   AGE
+replicaset.apps/supermanpod-5dbcf999db   2         2         2       10m
+
+> kubectl expose deployment.apps/supermanpod -n customnamespacerd -->
+service/supermanpod exposed
+
+
+> kubectl get all -n customnamespacerd -->
+NAME                               READY   STATUS    RESTARTS   AGE
+pod/supermanpod-5dbcf999db-wt6qg   1/1     Running   0          10m
+pod/supermanpod-5dbcf999db-xcfhz   1/1     Running   0          5m10s
+
+NAME                  TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)   AGE
+service/supermanpod   ClusterIP   10.20.242.134   <none>        80/TCP    57s
+
+NAME                          READY   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/supermanpod   2/2     2            2           12m
+
+NAME                                     DESIRED   CURRENT   READY   AGE
+replicaset.apps/supermanpod-5dbcf999db   2         2         2       12m
+
+> kubectl get nodes -o wide -->
+NAME                                STATUS   ROLES   AGE   VERSION   INTERNAL-IP   EXTERNAL-IP   OS-IMAGE             KERNEL-VERSION      CONTAINER-RUNTIME
+aks-agentpool-20806549-vmss000002   Ready    agent   58m   v1.28.9   10.224.0.7    <none>        Ubuntu 22.04.4 LTS   5.15.0-1064-azure   containerd://1.7.15-1
+aks-agentpool-20806549-vmss000003   Ready    agent   58m   v1.28.9   10.224.0.6    <none>        Ubuntu 22.04.4 LTS   5.15.0-1064-azure   containerd://1.7.15-1
+aks-userpool-20806549-vmss000002    Ready    agent   58m   v1.28.9   10.224.0.5    <none>        Ubuntu 22.04.4 LTS   5.15.0-1064-azure   containerd://1.7.15-1
+aks-userpool-20806549-vmss000003    Ready    agent   58m   v1.28.9   10.224.0.4    <none>        Ubuntu 22.04.4 LTS   5.15.0-1064-azure   containerd://1.7.15-1
+
+
+
+
+> kubectl describe service/supermanpod -n customnamespacerd -->
+Name:              supermanpod
+Namespace:         customnamespacerd
+Labels:            app=supermanpod
+Annotations:       <none>
+Selector:          app=supermanpod
+Type:              ClusterIP
+IP Family Policy:  SingleStack
+IP Families:       IPv4
+IP:                10.20.242.134
+IPs:               10.20.242.134
+Port:              <unset>  80/TCP
+TargetPort:        80/TCP
+Endpoints:         10.244.2.8:80,10.244.3.17:80
+Session Affinity:  None
+Events:            <none>
+
+
+
+
+
+
+
+
+
