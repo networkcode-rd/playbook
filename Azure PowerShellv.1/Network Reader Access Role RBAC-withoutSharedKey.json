@@ -1,5 +1,5 @@
 {
-    "id": "/subscriptions/xxxxxxxxxxxxxxxxxxxxxxxx/providers/Microsoft.Authorization/roleDefinitions/4baa81af-83ad-427f-8eda-b7d8a15c48c8",
+    "id": "/subscriptions/xxxxxxxxxxxxxxxxxxxxxxxx/providers/Microsoft.Authorization/roleDefinitions/xxxxxxxxxrole-definition-id-will-be-generatedxxxx",
     "properties": {
         "roleName": "rdnetworkreaderrole",
         "description": "",
