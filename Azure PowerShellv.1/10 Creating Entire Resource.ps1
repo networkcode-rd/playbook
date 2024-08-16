@@ -1,17 +1,44 @@
 #building an entire script of creating VM and assiging NSG to it
 # Updated file. Use this file only for practice.
 
-$resourceGroup="app-grp"
-$networkName="app-network"
-$location="Australia East"
+# First make sure that your PS console is authenticated to Azure Cloud.
+Connect-AzAccount -TenantId xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+# After authentication is successful, make sure the prompt that appeard with the "Subscription Name", is the right subscription you will be working on. If not, to get the list of subscription ID or Subscription name that is dedicated for your work purpose, use the below command and follow by verify command to make sure you are in the right subscription to make read/write changes.
+
+Get-AzSubscription
+
+#To verify
+Get-AzContext #Till this point we made sure we are in the right subscription.
+
+#Verify your Azure PowerShell version by running
+$PSVersionTable #To undestand which version you should be working on us the link: https://learn.microsoft.com/en-us/powershell/azure/install-azps-windows?view=azps-12.2.0&tabs=powershell&pivots=windows-psgallery
+
+#Pre-configuration verfication
+
+# (1) To select the right region for deployment use:
+Get-AzLocation | Format-Table
+
+
+# Let's build a Azure VM.
+
+#Declared Variable.
+
+$resourceGroup="Az-rd-104"
+$networkName="VNet-104-A"
+$location="southeastasia"
 $AddressPrefix="10.4.0.0/16"
 $subnetName="SubnetA"
 $subnetAddressPrefix="10.4.0.0/24"
 
-$subnet=New-AzVirtualNetworkSubnetConfig -Name $subnetName -AddressPrefix $subnetAddressPrefix
+New-AzResourceGroup -Name $resourceGroup -Location $location #Creating RG
 
 New-AzVirtualNetwork -Name $networkName -ResourceGroupName $resourceGroup `
 -Location $location -AddressPrefix $AddressPrefix -Subnet $subnet
+
+$subnet=New-AzVirtualNetworkSubnetConfig -Name $subnetName -AddressPrefix $subnetAddressPrefix
+
+# ----------------- Verify the resource creation until now by running these commmands ---------------------------
 
 $publicIPAddress="app-ip"
 
