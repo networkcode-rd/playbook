@@ -1,0 +1,6 @@
+NAME                STATUS   AGE
+default             Active   71m
+gatekeeper-system   Active   70m
+kube-node-lease     Active   71m
+kube-public         Active   71m
+kube-system         Active   71m
