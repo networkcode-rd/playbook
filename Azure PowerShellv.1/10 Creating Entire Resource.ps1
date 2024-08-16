@@ -33,19 +33,26 @@ $subnetAddressPrefix="10.4.0.0/24"
 
 New-AzResourceGroup -Name $resourceGroup -Location $location #Creating RG
 
+$subnet=New-AzVirtualNetworkSubnetConfig -Name $subnetName -AddressPrefix $subnetAddressPrefix
+
 New-AzVirtualNetwork -Name $networkName -ResourceGroupName $resourceGroup `
 -Location $location -AddressPrefix $AddressPrefix -Subnet $subnet
 
-$subnet=New-AzVirtualNetworkSubnetConfig -Name $subnetName -AddressPrefix $subnetAddressPrefix
 
 # ----------------- Verify the resource creation until now by running these commmands ---------------------------
+Get-AzVirtualNetwork -Name $networkName -ResourceGroupName $resourceGroup # Getting VNet information.
 
-$publicIPAddress="app-ip"
+Get-AzVirtualNetworkSubnetConfig -ResourceGroupName $resourceGroup -VirtualNetworkName $networkName
+
+# ----------------------------------------------------------------------------------------------------------------
+
+
+$publicIPAddress="PublicIP104"
 
 $publicIPAddress=New-AzPublicIpAddress -Name $publicIPAddress -ResourceGroupName $resourceGroup `
--Location $location -AllocationMethod Dynamic
+-Location $location -AllocationMethod Static
 
-$networkInterfaceName="app-interface"
+$networkInterfaceName="nic-vm-104"
 
 $VirtualNetwork=Get-AzVirtualNetwork -Name $networkName -ResourceGroupName $resourceGroup
 
@@ -58,8 +65,8 @@ $networkInterface=New-AzNetworkInterface -Name $networkInterfaceName -ResourceGr
 $IpConfig=Get-AzNetworkInterfaceIpConfig -NetworkInterface $networkInterface
 $networkInterface | Set-AzNetworkInterfaceIpConfig -PublicIpAddress $publicIPAddress `
 -Name $IpConfig.Name
+Set-AzNetworkInterface -NetworkInterface $networkInterface
 
-$networkInterface | Set-AzNetworkInterface
 
 $networkSecurityGroupName="app-nsg"
 
