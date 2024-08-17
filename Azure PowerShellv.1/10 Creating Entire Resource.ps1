@@ -118,13 +118,15 @@ Set-AzNetworkSecurityRuleConfig -Name "Allow-RDP-Only" -NetworkSecurityGroup $ne
 
 Set-AzNetworkSecurityGroup -NetworkSecurityGroup $networkSecurityGroup
 
-=========================================================
+#============================Creation of Availability==================================================
 
-$availabilitySetName="app-set"
+$availabilitySetName="AVS-104"
 $availabiltySet=New-AzAvailabilitySet -Location $location -ResourceGroupName $resourceGroup `
 -Name $availabilitySetName -Sku aligned `
 -PlatformFaultDomainCount 2 -PlatformUpdateDomainCount 5
 
+# ----------------------------------------------------------------------------------------------------------------
+#============================Creation of Azure Virtual Machine==================================================
 $vmName="appvm"
 $VMSize="Standard_DS2_v2"
 
@@ -144,3 +146,6 @@ $Vm=Add-AzVMNetworkInterface -VM $vmConfig -Id $networkInterface.Id
 Set-AzVMBootDiagnostic -Disable -VM $Vm
 
 New-AzVM -ResourceGroupName $resourceGroup -Location $Location -VM $Vm
+
+
+# ----------------------------------------------------------------------------------------------------------------
