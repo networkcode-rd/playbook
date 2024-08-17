@@ -67,25 +67,58 @@ $networkInterface | Set-AzNetworkInterfaceIpConfig -PublicIpAddress $publicIPAdd
 -Name $IpConfig.Name
 Set-AzNetworkInterface -NetworkInterface $networkInterface
 
+#===================== Buidling NSG ====For Subnet ====================
 
-$networkSecurityGroupName="app-nsg"
+$networkSecurityGroupName="NSG-104" #defined NSG name under a variable.
 
 $nsgRule1=New-AzNetworkSecurityRuleConfig -Name "Allow-RDP" -Access Allow -Protocol Tcp `
--Direction Inbound -Priority 120 -SourceAddressPrefix Internet -SourcePortRange * `
--DestinationAddressPrefix 10.4.0.0/24 -DestinationPortRange 3389
+-Direction Inbound -Priority 101 -SourceAddressPrefix Internet -SourcePortRange * `
+-DestinationAddressPrefix 10.4.0.0/24 -DestinationPortRange 3389 #Creating NSG rule-1 to allow RDP access.
 
 $nsgRule2=New-AzNetworkSecurityRuleConfig -Name "Allow-HTTP" -Access Allow -Protocol Tcp `
--Direction Inbound -Priority 130 -SourceAddressPrefix Internet -SourcePortRange * `
--DestinationAddressPrefix 10.4.0.0/24 -DestinationPortRange 80
+-Direction Inbound -Priority 140 -SourceAddressPrefix Internet -SourcePortRange * `
+-DestinationAddressPrefix 10.4.0.0/24 -DestinationPortRange 80 #Creating NSG rule-2 to allow HTTP access.
 
 $networkSecurityGroup=New-AzNetworkSecurityGroup -Name $networkSecurityGroupName -ResourceGroupName $resourceGroup `
--Location $location -SecurityRules $nsgRule1,$nsgRule2
+-Location $location -SecurityRules $nsgRule1,$nsgRule2 # Creation of NSG rule using the two newly NSG rules and calling it under NSG creation object.
 
 #Attach the NSG to the subnet
 Set-AzVirtualNetworkSubnetConfig -Name $subnetName -VirtualNetwork $VirtualNetwork `
 -NetworkSecurityGroup $networkSecurityGroup -AddressPrefix $subnetAddressPrefix
 
 $VirtualNetwork | Set-AzVirtualNetwork
+
+
+#===================== Buidling NSG ==== For NIC ====================
+
+$nicNSG = "nic-nsg-104"
+
+$nsgrule3 = New-AzNetworkSecurityRuleConfig -Name "Allow-RDP-Only" -Access Allow -Protocol Tcp -Direction Inbound -Priority 102 -SourceAddressPrefix * `
+-SourcePortRange * -DestinationAddressPrefix 10.4.0.0/24 -DestinationPortRange 3389 #NSG rule created.
+
+$networksecuritygroupnic = New-AzNetworkSecurityGroup -Name $nicNSG  -ResourceGroupName $resourceGroup -Location $location -SecurityRules $nsgrule3 # Till here the NSG gets created.
+
+# Now declare the NIC variable
+$networkInterfaceName = "nic-vm-104"
+
+$nic = Get-AzNetworkInterface -Name $networkInterfaceName -ResourceGroupName $resourceGroup
+
+$nic.NetworkSecurityGroup = $networksecuritygroupnic # link of NIC and NSG is completed. Now to update or reflect in the Azure Resource Manager or Azure Portal, use the next Set command.
+
+Set-AzNetworkInterface -NetworkInterface $nic
+
+#=======================Lets consider I need to update an existing rule#=======================
+
+$networkSecurityGroup = Get-AzNetworkSecurityGroup -Name $nicNSG -ResourceGroupName $resourceGroup
+
+Set-AzNetworkSecurityRuleConfig -Name "Allow-RDP-Only" -NetworkSecurityGroup $networkSecurityGroup `
+-Description "Allow-RDP-Only" -Access Allow -Protocol Tcp -Direction Inbound -Priority 102 `
+-SourceAddressPrefix 49.37.133.121 -SourcePortRange * -DestinationAddressPrefix * -DestinationPortRange 3389
+
+
+Set-AzNetworkSecurityGroup -NetworkSecurityGroup $networkSecurityGroup
+
+=========================================================
 
 $availabilitySetName="app-set"
 $availabiltySet=New-AzAvailabilitySet -Location $location -ResourceGroupName $resourceGroup `
