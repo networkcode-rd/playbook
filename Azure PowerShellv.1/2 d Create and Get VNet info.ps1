@@ -1,7 +1,9 @@
-$resourceGroup="app-grp"
-$location="North Europe"
-$networkName="app-network"
-$AddressPrefix="10.0.0.0/16"
+$resourceGroup="Az-rd-104"
+$networkName="VNet-104-A"
+$location="southeastasia"
+$AddressPrefix="10.4.0.0/16"
+$subnetName="SubnetA"
+$subnetAddressPrefix="10.4.0.0/24"
 
 $VirtualNetwork=New-AzVirtualNetwork -Name $networkName -ResourceGroupName $resourceGroup `
 -Location $location -AddressPrefix $AddressPrefix

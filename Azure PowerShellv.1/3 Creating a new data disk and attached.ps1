@@ -1,6 +1,6 @@
-$vmName="appvm"
-$resourceGroup="app-grp"
-$diskName="app-disk"
+$vmName="testvm"
+$resourceGroup="Az-RG-104"
+$diskName="datadisk"
 
 $vm=Get-AzVM -ResourceGroupName $resourceGroup -Name $vmName
 
