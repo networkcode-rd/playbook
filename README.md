@@ -1,8 +1,9 @@
-Playbook for PowerShell
+Playbook for PowerShell and Bash w.r.t Azure
+
 <br>
 Author - Ratnavo Dutta
 
-File is dowloaded to surface device successfully.
+Contains information on Networking based on industry based experience.
 
 <br>
 Changing for practice
