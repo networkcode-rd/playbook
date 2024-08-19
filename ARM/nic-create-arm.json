@@ -6,16 +6,10 @@
     "variables": {},
     "resources": [
         {
-            "name": "networkInterface1",
+            "name": "nic-vm-arm",
             "type": "Microsoft.Network/networkInterfaces",
             "apiVersion": "2023-11-01",
             "location": "[resourceGroup().location]",
-            "tags": {
-                "displayName": "networkInterface1"
-            },
-            "dependsOn": [
-                "[resourceId('Microsoft.Network/virtualNetworks', 'virtualNetwork1')]"
-            ],
             "properties": {
                 "ipConfigurations": [
                     {
