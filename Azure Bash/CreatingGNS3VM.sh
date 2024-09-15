@@ -26,36 +26,30 @@ az network vnet create --resource-group $RGROUP --name gns3internalvnet --addres
 
 az vm create --resource-group $RGROUP --name GSN3-client --size Standard_DS1_v2 --public-ip-sku Standard --vnet-name gns3internalvnetl --subnet gns3internalsub-1 --image Win2022Datacenter --admin-username <username> --no-wait --admin-password <password>
 
-# To get the list of VM Images along with Publisher name:
+    # To get the list of VM Images along with Publisher name:
 az vm image list --all --output table
 
-#Create a Linux virtual machine by using the Azure CLI
+    #Create a Linux virtual machine by using the Azure CLI
+
+az vm create --resource-group $RGROUP --name GNS3-server --size Standard_DS1_v2 --image Canonical:UbuntuServer:22.04-LTS:latest  --vnet-name gns3internalvnet --subnet gns3internalsub-1 --admin-username <username> --no-wait --admin-password <password>
 
 
-az vm create --resource-group $RGROUP --name GNS3-server --size Standard_DS1_v2 --image Ubuntu24:latest  --vnet-name gns3internalvnet --subnet gns3internalsub-1 --admin-username <username> --no-wait --admin-password <password>
-
-
-
-
---authentication-type ssh --generate-ssh-keys
-
-
-Step-4: Backup it up using Azure CLI.
+#Step-4: Backup it up using Azure CLI.
 
 az backup vault create --resource-group GSN3RG --location centralindia --name azure-backup
 
 
-Step:5: Using Cloud Shell, enable a backup.
+#Step:5: Using Cloud Shell, enable a backup.
 
 az backup protection enable-for-vm --resource-group GSN3RG --vault-name azure-backup --vm GSN3-client --policy-name StandardPolicy
 
 
-Step-6: Monitor the progress of the setup using the Azure CLI.
+#Step-6: Monitor the progress of the setup using the Azure CLI.
 
 az backup job list --resource-group GSN3RG --vault-name azure-backup --output table
 
 
-Step=7: Do an initial backup of the virtual machine, instead of waiting for the schedule to run it.
+#Step=7: Do an initial backup of the virtual machine, instead of waiting for the schedule to run it.
 
 
 az backup protection backup-now --resource-group GSN3RG --vault-name azure-backup --container-name GSN3-client --item-name GSN3-client --retain-until 18-10-2030 --backup-management-type AzureIaasVM
