@@ -9,8 +9,11 @@ Add-on
 You may opt-in to use WAM by running the following commands:
 
 az config set core.allow_broker=true
+<br>
 az account clear
+<br>
 az login
+<br>
 
 Web Account Manager (WAM) is an authentication broker that is the default authentication method for Azure CLI on Windows.
 
