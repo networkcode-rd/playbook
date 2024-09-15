@@ -4,7 +4,7 @@ But if you wish to learn more, refer the Microsoft Azure CLI documentation: http
 
 Add-on
 ------------------------------
-[Windows only] Azure CLI is collecting feedback on using the Web Account Manager (WAM) broker for the login experience.
+[Notification for Windows only] Azure CLI has introduced Web Account Manager (WAM) broker for the login experience. Web Account Manager (WAM) is an authentication broker that is the default authentication method for Azure CLI on Windows.
 
 You may opt-in to use WAM by running the following commands:
 
@@ -15,6 +15,6 @@ az account clear
 az login
 <br>
 
-Web Account Manager (WAM) is an authentication broker that is the default authentication method for Azure CLI on Windows.
+
 
 Author - Ratnavo Dutta
