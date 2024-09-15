@@ -31,7 +31,7 @@ az vm image list --all --output table
 
     #Create a Linux virtual machine by using the Azure CLI
 
-az vm create --resource-group $RGROUP --name GNS3-server --size Standard_DS1_v2 --image Canonical:UbuntuServer:22.04-LTS:latest  --vnet-name gns3internalvnet --subnet gns3internalsub-1 --admin-username <username> --no-wait --admin-password <password>
+az vm create --resource-group $RGROUP -name GNS3-server --size Standard_DS1_v2 --image Ubuntu2204  --vnet-name gns3internalvnet --subnet gns3internalsub-1 --admin-username <username> --no-wait --admin-password <password>
 
 
 #Step-4: Backup it up using Azure CLI.
