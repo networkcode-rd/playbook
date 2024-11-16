@@ -1,0 +1,25 @@
+Port Security
+===========================================
+ switchport mode access
+ switchport port-security
+ switchport port-security maximum 2
+ switchport port-security mac-address sticky 
+
+
+show port-security interface
+
+=========================================
+For Qemu VM // Debian
+sudo su
+ip link set dev ens4 up
+vi /etc/network/interfaces
+	# Static config for ens4
+#auto ens4
+#iface ens4 inet static
+        address 172.25.0.10
+        netmask 255.255.255.0
+        gateway 172.25.0.1
+        dns-nameservers 8.8.8.8
+
+
+sudo systemctl restart networking
