@@ -1,0 +1,80 @@
+version 15.2
+service timestamps debug datetime msec
+service timestamps log datetime msec
+!
+hostname R1
+!
+boot-start-marker
+boot-end-marker
+!
+!
+!
+no aaa new-model
+no ip icmp rate-limit unreachable
+ip cef
+!
+interface FastEthernet0/0
+ description To-SITE_B_C
+ ip address 10.23.0.13 255.255.255.252
+ duplex full
+!
+interface FastEthernet1/0
+ no ip address
+ shutdown
+ speed auto
+ duplex auto
+!
+interface FastEthernet1/1
+ no ip address
+ shutdown
+ speed auto
+ duplex auto
+!
+interface GigabitEthernet2/0
+ description To-SITE_A
+ ip address 10.23.0.26 255.255.255.252
+ negotiation auto
+!
+interface GigabitEthernet3/0
+ description To-FIREWALL
+ ip address 10.23.0.10 255.255.255.252
+ negotiation auto
+!
+ip forward-protocol nd
+!
+!
+no ip http server
+no ip http secure-server
+!
+banner motd ^CC
+ __   __   ______  ______  __     __   ______   ______   __  __   ______   __   __   __
+/\ "-.\ \ /\  ___\/\__  _\/\ \  _ \ \ /\  __ \ /\  == \ /\ \/ /  /\  ___\ /\ "-.\ \ /\ \
+\ \ \-.  \\ \  __\\/_/\ \/\ \ \/ ".\ \\ \ \/\ \\ \  __< \ \  _"-.\ \ \____\ \ \-.  \\ \ \____
+ \ \_\\"\_\\ \_____\ \ \_\ \ \__/".~\_\\ \_____\\ \_\ \_\\ \_\ \_\\ \_____\\ \_\\"\_\\ \_____\
+  \/_/ \/_/ \/_____/  \/_/  \/_/   \/_/ \/_____/ \/_/ /_/ \/_/\/_/ \/_____/ \/_/ \/_/ \/_____/
+
+^C
+!
+line con 0
+ exec-timeout 30 0
+ privilege level 15
+ password 7 0822455D0A16
+ logging synchronous
+ login
+ stopbits 1
+line aux 0
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+ stopbits 1
+line vty 0 4
+ exec-timeout 30 0
+ password 7 0822455D0A16
+ logging synchronous
+ login
+line vty 5 15
+ exec-timeout 30 0
+ password 7 0822455D0A16
+ logging synchronous
+ login
+!
