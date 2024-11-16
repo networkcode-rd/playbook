@@ -46,3 +46,11 @@ init - reference used for creating a new Git repo.
     > git branch (to check branch)
     > git branch -M main (to rename branch)
     > git push origin main
+
+
+============ Updating the repo locally==============
+   git remote
+   git remote -v
+   git pull origin https://xxxxxxxsdxxxxxxxsddd
+   git fetch origin
+   git merge
