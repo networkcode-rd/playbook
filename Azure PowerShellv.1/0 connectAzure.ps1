@@ -13,3 +13,26 @@ winget install --id Microsoft.Powershell --source winget
 #use to hide the path: function prompt{"PS >"}
 #pushing this configuration
 #abced
+
+
+#======================================================
+Connect-AzAccount -Tenant xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+#or 
+Connect-AzAccount
+#Then
+Select-AzSubscription -Subscription xxxxxxxxxxxxxxxxxxxxxx
+#Validate
+Get-AzContext
+#Proceed. Considering the VPN Gateway is already created.
+
+$gateway = Get-AzVirtualNetworkGateway -Name "VPN-gw" -ResourceGroupName "application-testing"
+$gateway.BgpSettings.Asn = 4259860126
+#Apply the changes
+Set-AzVirtualNetworkGateway -VirtualNetworkGateway $gateway
+
+#Verify the update
+$gateway = Get-AzVirtualNetworkGateway -Name "VPN-gw" -ResourceGroupName "application-testing"
+$gateway.BgpSettings.Asn
+
+
+Get-AzSubscription | Where-Object { $_.Name -like "*Shared*" }
