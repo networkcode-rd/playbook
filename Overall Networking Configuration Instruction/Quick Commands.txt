@@ -1,0 +1,9 @@
+show ip dhcp bindings
+show version
+show run
+show ip int brief
+showinterface description
+show ip protocols
+show ip route
+show run | section router rip
+debug ip rip
