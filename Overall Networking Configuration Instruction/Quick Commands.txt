@@ -7,3 +7,4 @@ show ip protocols
 show ip route
 show run | section router rip
 debug ip rip
+show ip nat translation
