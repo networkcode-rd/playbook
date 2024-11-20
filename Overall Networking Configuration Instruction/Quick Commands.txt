@@ -8,3 +8,8 @@ show ip route
 show run | section router rip
 debug ip rip
 show ip nat translation
+show sessions
+show users
+disconnect #
+clear line *
+show cdp neighbors
