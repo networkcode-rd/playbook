@@ -4,16 +4,16 @@ Get-AzP2sVpnGateway -Name "18c5e87c34dd4b3887e74bd6db0503e1-centralindia-p2s-gw"
 
 Get-AzP2sVpnGateway -Name "18c5e87c34dd4b3887e74bd6db0503e1-centralindia-p2s-gw" -ResourceGroupName "Cx-rg-CI" | select *
 
-Get-AzP2sVpnGateway -Name "18c5e87c34dd4b3887e74bd6db0503e1-centralindia-p2s-gw" -ResourceGroupName "Cx-rg-CI" | select * | ConvertTo-Json -Depth 100
+Get-AzP2sVpnGateway -Name "4961e118a10d4b92abb8f373f698af6f-westeurope-p2s-gw" -ResourceGroupName "RG-BO-CORP-HUB-01" | select * | ConvertTo-Json -Depth 100
 
 
 #================= update P2S configuration ================================
 
-Update-AzP2sVpnGateway -ResourceGroupname "Cx-rg-CI" -name "18c5e87c34dd4b3887e74bd6db0503e1-centralindia-p2s-gw"
+Update-AzP2sVpnGateway -ResourceGroupname "RG-BO-CORP-HUB-01" -name "4961e118a10d4b92abb8f373f698af6f-westeurope-p2s-gw"
 
 #==================== Reset VPN configuration ==============================
 
-$P2Svpn = Get-AzP2sVpnGateway -Name "18c5e87c34dd4b3887e74bd6db0503e1-centralindia-p2s-gw" -ResourceGroupName "Cx-rg-CI"
+$P2Svpn = Get-AzP2sVpnGateway -Name "4961e118a10d4b92abb8f373f698af6f-westeurope-p2s-gw" -ResourceGroupName "RG-BO-CORP-HUB-01"
 Reset-AzP2sVpnGateway -p2svpngateway $P2Svpn
 
 # Doc referred
