@@ -1,0 +1,13 @@
+In Windows:-
+    Open PowerShell using elevated prompt (Administrator mode)
+    Run the below commands:-
+
+  Id CommandLine
+  -- -----------
+   1 winget --version
+   2 winget --version
+   3 winget search openssl
+   4 winget install -e --id ShiningLight.OpenSSL
+   5 winget install -e --id ShiningLight.OpenSSL.Dev
+   6 openssl
+   7 setx PATH "%PATH%;C:\Program Files\OpenSSL-Win64\bin" /M
