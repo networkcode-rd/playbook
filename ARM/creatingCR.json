@@ -1,0 +1,22 @@
+{
+    "Name": "Crvwantest",
+    "Id": "null",
+    "IsCustom": true,
+    "Description": "Allows for read access to Azure storage and compute resources and access to support",
+    "Actions": [
+        "Microsoft.Network/virtualWans/*",
+        "Microsoft.Network/virtualHubs/*",
+        "Microsoft.Network/azureFirewalls/read",
+        "Microsoft.Network/networkVirtualAppliances/*/read",
+        "Microsoft.Network/securityPartnerProviders/*/read",
+        "Microsoft.Network/expressRouteGateways/*",
+        "Microsoft.Network/vpnGateways/*",
+        "Microsoft.Network/p2sVpnGateways/*",
+        "Microsoft.Network/virtualNetworks/peer/action"
+    ],
+    "NotActions": [],
+    "AssignableScopes": [
+      "/subscriptions/18258379-1915-4891-941a-038306f46ec8",
+
+    ]
+  }
