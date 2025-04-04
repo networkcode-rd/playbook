@@ -1,0 +1,35 @@
+{
+  "id": "/subscriptions/18258379-1915-4891-941a-038306f46ec8/providers/Microsoft.Authorization/roleDefinitions/cfb59876-e611-464e-b9e1-29e48f311d94",
+  "properties": {
+      "roleName": "crvwantest",
+      "description": "Allows for read access to Azure storage and compute resources and access to support",
+      "assignableScopes": [
+          "/subscriptions/18258379-1915-4891-941a-038306f46ec8"
+      ],
+      "permissions": [
+          {
+              "actions": [
+                  "Microsoft.Network/virtualWans/*",
+                  "Microsoft.Network/virtualHubs/*",
+                  "Microsoft.Network/azureFirewalls/read",
+                  "Microsoft.Network/networkVirtualAppliances/*/read",
+                  "Microsoft.Network/securityPartnerProviders/*/read",
+                  "Microsoft.Network/expressRouteGateways/*",
+                  "Microsoft.Network/vpnGateways/*",
+                  "Microsoft.Network/p2sVpnGateways/*",
+                  "Microsoft.Network/virtualNetworks/peer/action",
+                  "Microsoft.Network/virtualNetworks/join/action", 
+                  "Microsoft.Network/virtualHubs/hubVirtualNetworkConnections/delete",
+                  "Microsoft.Network/virtualHubs/routeMaps/read",
+                  "Microsoft.Network/virtualhubs/hubRouteTables/read",
+                  "Microsoft.Network/virtualHubs/hubVirtualNetworkConnections/write",
+                  "Microsoft.Network/virtualHubs/hubVirtualNetworkConnections/read"
+              ],
+              "notActions": [],
+              "dataActions": [],
+              "notDataActions": []
+          }
+      ]
+  }
+}
+

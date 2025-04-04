@@ -1,0 +1,15 @@
+sudo nano /etc/ssh/sshd_config
+
+#if Firewall (ufw) enabled, then allow the port.
+ufw status
+ufw allow 222/tcp
+
+#Restart SSH services:-
+systemctl restart ssh
+
+
+#check the status of SSH port:-
+systemctl status ssh
+ss -tulpn
+
+#if still showing old port and not the newly configured port, restart the machine.

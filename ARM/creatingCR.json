@@ -3,20 +3,30 @@
     "Id": "null",
     "IsCustom": true,
     "Description": "Allows for read access to Azure storage and compute resources and access to support",
-    "Actions": [
-        "Microsoft.Network/virtualWans/*",
-        "Microsoft.Network/virtualHubs/*",
-        "Microsoft.Network/azureFirewalls/read",
-        "Microsoft.Network/networkVirtualAppliances/*/read",
-        "Microsoft.Network/securityPartnerProviders/*/read",
-        "Microsoft.Network/expressRouteGateways/*",
-        "Microsoft.Network/vpnGateways/*",
-        "Microsoft.Network/p2sVpnGateways/*",
-        "Microsoft.Network/virtualNetworks/peer/action"
-    ],
-    "NotActions": [],
+    {
+      "actions": [
+          "Microsoft.Network/virtualWans/*",
+          "Microsoft.Network/virtualHubs/*",
+          "Microsoft.Network/azureFirewalls/read",
+          "Microsoft.Network/networkVirtualAppliances/*/read",
+          "Microsoft.Network/securityPartnerProviders/*/read",
+          "Microsoft.Network/expressRouteGateways/*",
+          "Microsoft.Network/vpnGateways/*",
+          "Microsoft.Network/p2sVpnGateways/*",
+          "Microsoft.Network/virtualNetworks/peer/action",
+          "Microsoft.Network/virtualNetworks/join/action", 
+          "Microsoft.Network/virtualHubs/hubVirtualNetworkConnections/delete",
+          "Microsoft.Network/virtualHubs/routeMaps/read",
+          "Microsoft.Network/virtualhubs/hubRouteTables/read",
+          "Microsoft.Network/virtualHubs/hubVirtualNetworkConnections/write",
+          "Microsoft.Network/virtualHubs/hubVirtualNetworkConnections/read"
+      ],
+      "notActions": [],
+      "dataActions": [],
+      "notDataActions": []
+  }
     "AssignableScopes": [
-      "/subscriptions/18258379-1915-4891-941a-038306f46ec8",
+      "/subscriptions/bec0324e-4ff3-4e18-8d7b-2741bb57234f",
 
     ]
   }
