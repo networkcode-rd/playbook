@@ -20,5 +20,5 @@ no cdp enable
 no cdp run
 copy tftp start #Backup to startup and reboot
 boot systemtftp://x.x.x.x/xxxxx.bin
-write erase
+write erase + reload
 erase startup-config // delete startup-config
