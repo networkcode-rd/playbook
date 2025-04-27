@@ -57,14 +57,12 @@ banner motd ^CC
 !
 line con 0
  exec-timeout 30 0
- privilege level 15
  password 7 0822455D0A16
  logging synchronous
  login
  stopbits 1
 line aux 0
  exec-timeout 0 0
- privilege level 15
  logging synchronous
  stopbits 1
 line vty 0 4
