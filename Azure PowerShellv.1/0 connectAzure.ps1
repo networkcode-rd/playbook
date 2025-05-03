@@ -34,5 +34,3 @@ Set-AzVirtualNetworkGateway -VirtualNetworkGateway $gateway
 $gateway = Get-AzVirtualNetworkGateway -Name "VPN-gw" -ResourceGroupName "application-testing"
 $gateway.BgpSettings.Asn
 
-
-Get-AzSubscription | Where-Object { $_.Name -like "*Shared*" }
