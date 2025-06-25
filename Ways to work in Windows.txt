@@ -1,0 +1,46 @@
+# for making the path shorter.
+function prompt { "PS> " }
+
+
+When using PowerShell and your prompt currently looks like this:
+
+PS D:\01 C.O.D.E\playbook\Terraform Prac\Terraform N Azure>
+
+
+✅ Option 1
+
+Short Temporary Prompt
+
+Use this in the current PowerShell session to simplify it: powershell
+
+    function prompt { "PS> " }
+Now your prompt will look like:
+    PS>
+
+
+✅ Option 2: Show Only Folder Name
+
+Want it to show just the current folder (e.g., Terraform N Azure)?
+
+Use this: powershell
+
+    function prompt { "$(Split-Path -Leaf (Get-Location))> " }
+
+Now your prompt will show like:
+    Terraform N Azure>
+
+💾 Option 3
+
+Make It Permanent
+
+If you like any of the above styles, save it to your PowerShell profile:
+
+Open your profile: powershell
+
+notepad $PROFILE
+
+Add your chosen prompt function (like function prompt { "PS> " })
+
+Save and restart PowerShell.
+
+========End============
